@@ -39,6 +39,7 @@ const sendMagic = (data) => {
 
 }
 
+// code below used for testing the module independently
 // sendMagic({
 // destination : 'test',
 // departureFrom:'test',
