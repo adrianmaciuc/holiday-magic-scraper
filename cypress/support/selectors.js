@@ -8,4 +8,9 @@ export const SELECTORS = {
     DATE_OF_DEPARTURE: 'i.fa-calendar-alt',
     NR_OF_ROOMS : 'i.fa-bed',
     NR_OF_ADULTS : 'i.fa-user',
+    NR_OF_KIDS : 'i.fa-child',
+    KID_AGE : '[helper="La întoarcere"]',
+    SEARCH_BTN : 'a.ct-search-btn',
+    RESULT_TITLE: 'h2.ct-item-title',
+    PRICE: 'div.ct-item-sell-price',
 }
