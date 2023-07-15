@@ -19,7 +19,7 @@ const sendMagic = (data) => {
     let mailOptions = {
         from: `${data.emailUsedToSend}`,
         to: `${data.sendResultsTo}`,
-        subject: `Price for holiday - ${data.finalPrice} eur`,
+        subject: `Price for holiday on ${data.dateOfDeparture} - ${data.finalPrice} eur`,
         html: `<html>
         Destination = ${data.destination}<br>
         Departure from = ${data.departureFrom}<br>
