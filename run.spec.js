@@ -71,5 +71,6 @@ describe('Get holiday', () => {
 
       cy.log(`Email should be sent with price value of ${finalPrice}`)
     })
+    cy.wait(2000)
   })
 })
