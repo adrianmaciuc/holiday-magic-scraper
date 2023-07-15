@@ -56,7 +56,6 @@ describe('Get holiday', () => {
     cy.get(s.SEARCH_BTN).click()
     cy.contains(s.RESULT_TITLE, destination.toUpperCase(), {timeout: 30000}).should('be.visible')
     cy.get(s.PRICE).then(function(price) {
-      debugger
       finalPrice = price[0].innerText.split('\n')[1]
     }).then(function(){
       cy.task('sendEmail', {
@@ -69,6 +68,8 @@ describe('Get holiday', () => {
           sendResultsTo,
           finalPrice 
       })
+
+      cy.log(`Email should be sent with price value of ${finalPrice}`)
     })
   })
 })

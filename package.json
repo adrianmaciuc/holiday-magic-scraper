@@ -12,5 +12,8 @@
     "cypress": "^12.17.1",
     "dotenv": "^16.3.1",
     "nodemailer": "^6.9.3"
+  },
+  "devDependencies": {
+    "cypress-terminal-report": "^5.3.2"
   }
 }

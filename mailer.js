@@ -39,4 +39,14 @@ const sendMagic = (data) => {
 
 }
 
+// sendMagic({
+// destination : 'test',
+// departureFrom:'test',
+// dateOfDeparture:'test',
+// nrOfRooms:'test',
+// nrOfAdults:'test',
+// emailUsedToSend:'bugghunter69@gmail.com',
+// sendResultsTo:'adrian.maciuc@gmail.com',
+// finalPrice:'test'})
+
 module.exports = sendMagic

@@ -10,11 +10,12 @@ module.exports = defineConfig({
 		defaultCommandTimeout: 15000,
     
 		setupNodeEvents(on, config) {
+			require('cypress-terminal-report/src/installLogsPrinter')(on, {printLogsToConsole : 'always'})
 			on('task', {
 				sendEmail(price) {
 					sendMagic(price)
 				return null
-				}
+				},
 			  })
 		},
 	},
