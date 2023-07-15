@@ -1,6 +1,7 @@
-**Email Data Scraping Script for Romanian Top Holiday Services Provider**
+## Main Idea
+**Imagine you have 2 dates of the year that you know when you can take holiday. And you know exactly where you want to go but you just want to be notified by email, on a DAILY basis (with a cron-job), what is the price of the holiday based on your specific criteria**
 
-This script will help you get data from one of Romania's leading holiday services providers and sends it to your email. Start by following the instructions below to configure the email sending functionality:
+This script will help you get that data for **FREE** from one of Romania's leading holiday services providers Christian Tour and sends it to your email. Start by following the instructions below to configure the email sending functionality:
 
 1. You can use your Gmail account for sending emails, for free. If you haven't already, enable two-step verification for your account by visiting: [Google Account Security](https://myaccount.google.com/security).
 
@@ -13,3 +14,7 @@ This script will help you get data from one of Romania's leading holiday service
 3. Store the generated password securely in your secrets or environment file as `MAIL_PASS = 'secretCodeNoSpaceNeeded'`.
 
 4. Customize the search parameters by editing the values in the `run.spec.js` file according to your desired holiday criteria.
+
+5. You can choose 2 dates to scrape the data. Inside each `context` of each test you will find `dateOfDeparture` to edit. Two emails will be sent.
+
+6. Schedule your cron job from `\scrape_holiday\.github\workflows\node.yml` - by default is set every day at 12 noon time
