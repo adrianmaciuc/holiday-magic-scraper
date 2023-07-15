@@ -1,12 +1,12 @@
 const { defineConfig } = require('cypress')
 require('dotenv').config()
-const sendMagic = require('./cypress/support/mailer')
+const sendMagic = require('./mailer')
 
 module.exports = defineConfig({
 	e2e: {
 		baseUrl: process.env.BASE_URL,
-		specPattern: '**/specs/*.spec.js',
-		supportFile: 'cypress/support/index.js',
+		specPattern: '**/*.spec.js',
+		supportFile: 'support.js',
 		defaultCommandTimeout: 15000,
     
 		setupNodeEvents(on, config) {

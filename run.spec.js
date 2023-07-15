@@ -1,4 +1,4 @@
-import { SELECTORS as s } from "../support/selectors"
+import { SELECTORS as s } from "./selectors"
 
 /*
 Preconditions:
