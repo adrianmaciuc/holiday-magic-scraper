@@ -4,7 +4,7 @@ const sendMagic = require('./mailer')
 
 module.exports = defineConfig({
 	e2e: {
-		baseUrl: process.env.BASE_URL,
+		baseUrl: 'https://christiantour.ro/',
 		specPattern: '**/*.spec.js',
 		supportFile: 'support.js',
 		defaultCommandTimeout: 15000,

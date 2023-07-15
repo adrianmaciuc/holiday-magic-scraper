@@ -28,7 +28,7 @@ let finalPrice
 
 describe('Get holiday', () => {
   it('Get it boy!', () => {
-    cy.visit('/')
+    cy.visit('https://christiantour.ro/')
     cy.get(s.DESTINATION).first().type(destination)
     cy.get(s.DESTINATION_DROPDOWN_ITEM).contains(destination).click()
     cy.get(s.TRANSPORT_TYPE).click()
