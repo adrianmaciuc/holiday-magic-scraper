@@ -8,7 +8,7 @@ This will generate a password for you that you can use for nodemailer to login p
 Put that password in your secrets/env file under MAIL_PASS = 'secretCodeNoSpaceNeeded'
 */
 
-// replace here with options of your choice 
+// replace below with options of your choice 
 
 const destination = 'Kalimera Kriti'
 const transportType = 'Avion'
@@ -27,7 +27,7 @@ let finalPrice
 // -------------------------------------------
 
 describe('Get holiday', () => {
-  it('Get', () => {
+  it('Get it boy!', () => {
     cy.visit('/')
     cy.get(s.DESTINATION).first().type(destination)
     cy.get(s.DESTINATION_DROPDOWN_ITEM).contains(destination).click()
@@ -54,7 +54,7 @@ describe('Get holiday', () => {
     // above 6 lines are optional, you can comment them out if you don't need for kids as well
 
     cy.get(s.SEARCH_BTN).click()
-    cy.contains(s.RESULT_TITLE, destination.toUpperCase()).should('be.visible')
+    cy.contains(s.RESULT_TITLE, destination.toUpperCase(), {timeout: 30000}).should('be.visible')
     cy.get(s.PRICE).then(function(price) {
       debugger
       finalPrice = price[0].innerText.split('\n')[1]
