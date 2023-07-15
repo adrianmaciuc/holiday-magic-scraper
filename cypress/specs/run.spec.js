@@ -43,6 +43,9 @@ describe('Get holiday', () => {
     cy.contains(s.RESULT_TITLE, destination.toUpperCase()).should('be.visible')
     cy.get(s.PRICE).then(function(price) {
       finalPrice = price[0].innerText.replace(/\D/g, '')
+    }).then(function(){
+      debugger
+      cy.task('sendEmail', finalPrice)
     })
   })
 })
