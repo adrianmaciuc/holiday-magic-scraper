@@ -1,4 +1,4 @@
-## Main Idea
+## Get in your email the best price for your next holiday - **FOR FREE**
 **Imagine you have 2 dates of the year that you know when you can take holiday. And you know exactly where you want to go but you just want to be notified by email, on a DAILY basis (with a cron-job), what is the price of the holiday based on your specific criteria**
 
 This script will help you get that data for **FREE** from one of Romania's leading holiday services providers Christian Tour and sends it to your email. Start by following the instructions below to configure the email sending functionality:
