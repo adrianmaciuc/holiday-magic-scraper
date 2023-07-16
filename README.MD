@@ -15,6 +15,6 @@ This script will help you get that data for **FREE** from one of Romania's leadi
 
 4. Customize the search parameters by editing the values in the `run.spec.js` file according to your desired holiday criteria.
 
-5. You can choose 2 dates to scrape the data. Inside each `context` of each test you will find `dateOfDeparture` to edit. Two emails will be sent.
+5. You can choose how many dates you want as long as they are valid and you actually have a flight that day . Just add the same format the date in the array of `datesOfDeparture`. It will iterate and send as many emails as dates are set.
 
-6. Schedule your cron job from `\scrape_holiday\.github\workflows\node.yml` - by default is set every day at 12 noon time
+6. Schedule your cron job from `\scrape_holiday\.github\workflows\node.yml` - by default is set every day at 12 noon time (UTC Time)
