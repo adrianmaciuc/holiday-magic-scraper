@@ -23,6 +23,7 @@ const sendResultsTo = 'adrian.maciuc@gmail.com'
 const emailUsedToSend = 'bugghunter69@gmail.com'
 const datesOfDeparture = ['21.09.2023',
                           '14.09.2023']
+const howMuchYouWantToPay = 820
 
 // -------------------------------------------
 
@@ -59,20 +60,22 @@ describe('Get holiday', () => {
         cy.get(s.SEARCH_BTN).click()
         cy.contains(s.RESULT_TITLE, destination.toUpperCase(), {timeout: 30000}).should('be.visible')
         cy.get(s.PRICE)
-          .then(function(price) {return price[0].innerText.split('\n')[1]})
+          .then(function(price) {return price[0].innerText.split('\n')[1].replace('€','')})
           .then(function(finalPrice){
-            cy.task('sendEmail', {
-                destination,
-                departureFrom,
-                dateOfDeparture,
-                nrOfRooms,
-                nrOfAdults,
-                emailUsedToSend,
-                sendResultsTo,
-                finalPrice 
-            })
+            if (finalPrice < howMuchYouWantToPay) {
+              cy.task('sendEmail', {
+                  destination,
+                  departureFrom,
+                  dateOfDeparture,
+                  nrOfRooms,
+                  nrOfAdults,
+                  emailUsedToSend,
+                  sendResultsTo,
+                  finalPrice 
+              })
+            }
   
-          cy.log(`Email should be sent with price value of ${finalPrice}`)
+          cy.log(`Price value of ${finalPrice}`)
         })
         cy.wait(10000)
     })
